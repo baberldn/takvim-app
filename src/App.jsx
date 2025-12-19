@@ -6,6 +6,8 @@ import { Lessons } from './components/Lessons'
 import { Tasks } from './components/Tasks'
 import { Quizzes } from './components/Quizzes'
 import { Resources } from './components/Resources'
+import { Flashcards } from './components/Flashcards'
+import { CodeSnippets } from './components/CodeSnippets'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import './App.css'
 
@@ -105,6 +107,15 @@ function App() {
         )
       case 'resources':
         return <Resources />
+      case 'flashcards':
+        return (
+          <Flashcards
+            userProgress={currentUserProgress}
+            onUpdateProgress={handleUpdateProgress}
+          />
+        )
+      case 'snippets':
+        return <CodeSnippets />
       default:
         return null
     }

@@ -56,6 +56,27 @@ export function Sidebar({ currentPage, onNavigate }) {
         </svg>
       ),
     },
+    {
+      id: 'flashcards',
+      label: 'Flashcards',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="M12 8v8" />
+          <path d="M8 12h8" />
+        </svg>
+      ),
+    },
+    {
+      id: 'snippets',
+      label: 'Kod Örnekleri',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+        </svg>
+      ),
+    },
   ]
 
   return (
