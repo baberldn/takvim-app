@@ -1,0 +1,138 @@
+export const courses = [
+  {
+    week: 1,
+    title: 'React Native Temelleri',
+    lessons: [
+      {
+        id: '1.1',
+        title: 'Giriş & Kurulum',
+        duration: '45 dk',
+        topics: ['Expo vs CLI', 'Proje yapısı', 'İlk uygulama', 'Hot reload'],
+        description: 'React Native dünyasına giriş yapıyoruz. Expo ile hızlı başlangıç, proje yapısını anlama ve ilk uygulamanızı oluşturma.',
+      },
+      {
+        id: '1.2',
+        title: 'Core Components',
+        duration: '60 dk',
+        topics: ['View', 'Text', 'Image', 'ScrollView', 'FlatList', 'TouchableOpacity'],
+        description: 'React Native\'in temel yapı taşlarını öğreniyoruz. Web\'deki div, span, img yerine native componentler.',
+      },
+      {
+        id: '1.3',
+        title: 'Styling & Flexbox',
+        duration: '50 dk',
+        topics: ['StyleSheet API', 'Flexbox layout', 'Responsive tasarım'],
+        description: 'CSS\'den farklı olarak StyleSheet API kullanımı. Flexbox ile mobil uyumlu layoutlar oluşturma.',
+      },
+      {
+        id: '1.4',
+        title: 'Platform-Specific',
+        duration: '40 dk',
+        topics: ['Platform.OS', 'Platform-specific dosyalar', 'SafeAreaView'],
+        description: 'iOS ve Android arasındaki farkları yönetme. Platform bazlı kod yazma teknikleri.',
+      },
+    ],
+  },
+  {
+    week: 2,
+    title: 'Navigation & UI',
+    lessons: [
+      {
+        id: '2.1',
+        title: 'React Navigation',
+        duration: '60 dk',
+        topics: ['Stack Navigator', 'Ekranlar arası geçiş', 'Params'],
+        description: 'React Navigation kütüphanesi ile sayfa yönetimi. Stack Navigator ile temel navigasyon.',
+      },
+      {
+        id: '2.2',
+        title: 'Tab & Drawer',
+        duration: '55 dk',
+        topics: ['Bottom tabs', 'Drawer menu', 'Nested navigators'],
+        description: 'Alt menü (tab bar) ve yan menü (drawer) oluşturma. Karmaşık navigasyon yapıları.',
+      },
+      {
+        id: '2.3',
+        title: 'Custom Components',
+        duration: '50 dk',
+        topics: ['Reusable components', 'Props', 'Component patterns'],
+        description: 'Yeniden kullanılabilir componentler tasarlama. Best practices ve design patterns.',
+      },
+      {
+        id: '2.4',
+        title: 'Animasyonlar',
+        duration: '60 dk',
+        topics: ['Animated API', 'LayoutAnimation', 'Gesture handling'],
+        description: 'Uygulamanıza hayat katın. Native performanslı animasyonlar ve gesture yönetimi.',
+      },
+    ],
+  },
+  {
+    week: 3,
+    title: 'Data & State Management',
+    lessons: [
+      {
+        id: '3.1',
+        title: 'AsyncStorage',
+        duration: '45 dk',
+        topics: ['Lokal veri saklama', 'CRUD işlemleri'],
+        description: 'Cihazda veri saklama. AsyncStorage ile kalıcı veri yönetimi.',
+      },
+      {
+        id: '3.2',
+        title: 'API Entegrasyonu',
+        duration: '55 dk',
+        topics: ['Fetch', 'Axios', 'Loading/error states'],
+        description: 'Backend ile iletişim. API çağrıları, loading durumları ve hata yönetimi.',
+      },
+      {
+        id: '3.3',
+        title: 'State Management',
+        duration: '60 dk',
+        topics: ['Context API', 'useReducer', 'Global state patterns'],
+        description: 'Uygulama genelinde state yönetimi. Context API ile global state.',
+      },
+      {
+        id: '3.4',
+        title: 'Forms & Validation',
+        duration: '50 dk',
+        topics: ['TextInput', 'Form handling', 'Keyboard avoiding'],
+        description: 'Form oluşturma ve doğrulama. Klavye yönetimi ve kullanıcı deneyimi.',
+      },
+    ],
+  },
+  {
+    week: 4,
+    title: 'Native Özellikler & Yayınlama',
+    lessons: [
+      {
+        id: '4.1',
+        title: 'Cihaz Özellikleri',
+        duration: '60 dk',
+        topics: ['Kamera', 'Galeri', 'Konum', 'expo-image-picker', 'expo-location'],
+        description: 'Cihaz özelliklerine erişim. Kamera, galeri ve konum servisleri kullanımı.',
+      },
+      {
+        id: '4.2',
+        title: 'Bildirimler',
+        duration: '50 dk',
+        topics: ['Push notifications', 'Local notifications'],
+        description: 'Kullanıcılarla etkileşim. Push ve local bildirimler gönderme.',
+      },
+      {
+        id: '4.3',
+        title: 'Build & Deploy',
+        duration: '55 dk',
+        topics: ['EAS Build', 'App Store hazırlık', 'Google Play hazırlık'],
+        description: 'Uygulamanızı mağazalara yayınlama. Build süreçleri ve store gereksinimleri.',
+      },
+      {
+        id: '4.4',
+        title: 'Final Proje',
+        duration: '90 dk',
+        topics: ['Tüm konuları içeren kapsamlı uygulama'],
+        description: 'Öğrendiklerinizi birleştirin. Gerçek dünya projesi geliştirme.',
+      },
+    ],
+  },
+]
