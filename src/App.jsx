@@ -5,6 +5,7 @@ import { Sidebar } from './components/Sidebar'
 import { Lessons } from './components/Lessons'
 import { Tasks } from './components/Tasks'
 import { Quizzes } from './components/Quizzes'
+import { Resources } from './components/Resources'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import './App.css'
 
@@ -102,6 +103,8 @@ function App() {
             onUpdateProgress={handleUpdateProgress}
           />
         )
+      case 'resources':
+        return <Resources />
       default:
         return null
     }
