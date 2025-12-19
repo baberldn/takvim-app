@@ -4,6 +4,7 @@ import { Login } from './components/Login'
 import { Sidebar } from './components/Sidebar'
 import { Lessons } from './components/Lessons'
 import { Tasks } from './components/Tasks'
+import { Quizzes } from './components/Quizzes'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import './App.css'
 
@@ -90,6 +91,13 @@ function App() {
       case 'tasks':
         return (
           <Tasks
+            userProgress={currentUserProgress}
+            onUpdateProgress={handleUpdateProgress}
+          />
+        )
+      case 'quizzes':
+        return (
+          <Quizzes
             userProgress={currentUserProgress}
             onUpdateProgress={handleUpdateProgress}
           />
