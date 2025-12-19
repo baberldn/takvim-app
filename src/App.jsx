@@ -11,6 +11,7 @@ function App() {
   const [user, setUser] = useLocalStorage('takvim-user', null)
   const [events, setEvents] = useLocalStorage('takvim-events', [])
   const [userProgress, setUserProgress] = useLocalStorage('takvim-progress', {})
+  const [lessonNotes, setLessonNotes] = useLocalStorage('takvim-lesson-notes', [])
   const [currentPage, setCurrentPage] = useState('lessons')
 
   const handleLogin = (userData) => {
@@ -40,6 +41,22 @@ function App() {
     })
   }
 
+  const handleAddNote = (note) => {
+    setLessonNotes([...lessonNotes, { ...note, id: Date.now().toString(), authorId: user.id, authorName: user.name, createdAt: new Date().toISOString() }])
+  }
+
+  const handleDeleteNote = (noteId) => {
+    setLessonNotes(lessonNotes.filter((n) => n.id !== noteId))
+  }
+
+  const handleEditNote = (noteId, updatedData) => {
+    setLessonNotes(lessonNotes.map((n) =>
+      n.id === noteId
+        ? { ...n, ...updatedData, updatedAt: new Date().toISOString() }
+        : n
+    ))
+  }
+
   const userEvents = user ? events.filter((e) => e.userId === user.id) : []
   const currentUserProgress = user ? userProgress[user.id] || {} : {}
 
@@ -61,8 +78,13 @@ function App() {
       case 'lessons':
         return (
           <Lessons
+            user={user}
             userProgress={currentUserProgress}
             onUpdateProgress={handleUpdateProgress}
+            lessonNotes={lessonNotes}
+            onAddNote={handleAddNote}
+            onDeleteNote={handleDeleteNote}
+            onEditNote={handleEditNote}
           />
         )
       case 'tasks':

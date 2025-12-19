@@ -857,6 +857,386 @@
 }
 
 /* ==================== */
+/* Lesson Notes Styles */
+/* ==================== */
+
+.lesson-notes-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.lesson-notes-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.lesson-notes-section h4 svg {
+  width: 20px;
+  height: 20px;
+  color: #667eea;
+}
+
+.add-note-form {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-note-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.add-note-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.note-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  gap: 1rem;
+}
+
+.file-upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.file-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border: 2px dashed #d1d5db;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-upload-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.file-upload-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.selected-file {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background: #ede9fe;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #667eea;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected-file button {
+  border: none;
+  background: none;
+  color: #667eea;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.selected-file button:hover {
+  color: #ef4444;
+}
+
+.add-note-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-note-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.add-note-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.no-notes {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+.note-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.note-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.note-avatar {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.note-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-author-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.note-date {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.note-delete-btn {
+  border: none;
+  background: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.note-delete-btn:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.note-delete-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.note-edit-btn {
+  border: none;
+  background: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.note-edit-btn:hover {
+  background: #dbeafe;
+  color: #3b82f6;
+}
+
+.note-edit-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.note-card.editing {
+  background: #f8fafc;
+  border: 1px solid #667eea;
+}
+
+.note-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.note-edit-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.note-edit-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.note-edit-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cancel-edit-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-edit-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.save-edit-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-edit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.save-edit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.note-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.note-file {
+  margin-top: 0.75rem;
+}
+
+.file-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.file-download:hover {
+  background: #e5e7eb;
+}
+
+.file-download svg {
+  width: 18px;
+  height: 18px;
+  color: #667eea;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-size {
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+/* ==================== */
 /* Tasks Page Styles */
 /* ==================== */
 
@@ -2043,6 +2423,119 @@
 
   .lesson-modal-footer {
     border-top-color: #334155;
+  }
+
+  /* Notes Dark Mode */
+  .lesson-notes-section {
+    border-top-color: #334155;
+  }
+
+  .lesson-notes-section h4 {
+    color: #e2e8f0;
+  }
+
+  .add-note-form {
+    background: #0f172a;
+  }
+
+  .add-note-form textarea {
+    background: #1e293b;
+    border-color: #475569;
+    color: #f1f5f9;
+  }
+
+  .add-note-form textarea:focus {
+    border-color: #667eea;
+  }
+
+  .file-upload-btn {
+    background: #1e293b;
+    border-color: #475569;
+    color: #94a3b8;
+  }
+
+  .file-upload-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+  }
+
+  .selected-file {
+    background: #334155;
+    color: #a78bfa;
+  }
+
+  .note-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .note-author-name {
+    color: #e2e8f0;
+  }
+
+  .note-date {
+    color: #64748b;
+  }
+
+  .note-text {
+    color: #cbd5e1;
+  }
+
+  .note-delete-btn {
+    color: #64748b;
+  }
+
+  .note-delete-btn:hover {
+    background: #422006;
+    color: #ef4444;
+  }
+
+  .note-edit-btn {
+    color: #64748b;
+  }
+
+  .note-edit-btn:hover {
+    background: #1e3a5f;
+    color: #3b82f6;
+  }
+
+  .note-card.editing {
+    background: #0f172a;
+    border-color: #667eea;
+  }
+
+  .note-edit-form textarea {
+    background: #1e293b;
+    border-color: #475569;
+    color: #f1f5f9;
+  }
+
+  .note-edit-form textarea:focus {
+    border-color: #667eea;
+  }
+
+  .cancel-edit-btn {
+    background: #1e293b;
+    border-color: #475569;
+    color: #94a3b8;
+  }
+
+  .cancel-edit-btn:hover {
+    background: #334155;
+    border-color: #64748b;
+  }
+
+  .file-download {
+    background: #334155;
+    color: #e2e8f0;
+  }
+
+  .file-download:hover {
+    background: #475569;
+  }
+
+  .no-notes {
+    color: #64748b;
   }
 
   .coming-soon {
